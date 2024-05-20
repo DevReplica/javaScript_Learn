@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculatorBuild</title>
+  <style>
+    *{
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+    .grid-container{
+      width: 100%;
+      height: 100vh;
+      background-color: orangered;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .myForm{
+      display: flex;
+      justify-content: space-between;
+      /* gap: 10px; */
+      margin-bottom: 5%;
+    }
+    .calculatorBody{
+      width: 29%;
+      padding: 1% 1%;
+      border-radius: 5px;
+      background-color: gray;
+    }
+    .calculatorBody .myForm input{
+      width: 60px;
+      outline: 0;
+      border: 0;
+      height: 60px;
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 10px;
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .displayAns{
+      width: 100% !important;
+      border-radius: 10px;
+      margin-bottom: 7%;
+      height: 8%;
+      text-align: end;
+      color: red;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .displayAns input{
+      text-align: right;
+      flex: 1; 
+      box-shadow: none;
+      border-radius: 7px;
+      border: 0;
+    }
+    .equalsTo{
+      width: 145px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="calculatorBody">
+      <form action="">
+        <div class="displayAns">
+          <input type="text" name="dislay">
+        </div>
+        <div class="myForm">
+          <div>
+            <input type="button" value="AC">
+          </div>
+          <div>
+            <input type="button" value="DE"></div>
+          <div>
+            <input type="button" value=".">
+          </div>
+          <div>
+            <input type="button" value="/">
+          </div>
+        </div>
+        <div class="myForm">
+          <div>
+            <input type="button" value="7" onclick="display.value += '7' ">
+          </div>
+          <div>
+            <input type="button" value="8" onclick="display.value += '8' ">
+          </div>
+          <div>
+            <input type="button" value="9">
+          </div>
+          <div>
+            <input type="button" value="*">
+          </div>
+        </div>
+        <div class="myForm">
+          <div>
+            <input type="button" value="4">
+          </div>
+          <div>
+            <input type="button" value="5">
+          </div>
+          <div>
+            <input type="button" value="6">
+          </div>
+          <div>
+            <input type="button" value="--">
+          </div>
+        </div>
+        <div class="myForm">
+          <div>
+            <input type="button" value="1">
+          </div>
+          <div>
+            <input type="button" value="2">
+          </div>
+          <div>
+            <input type="button" value="3">
+          </div>
+          <div>
+            <input type="button" value="+">
+          </div>
+        </div>
+      </form>
+      <div class="myForm">
+        <div>
+          <input type="button" value="00">
+        </div>
+        <div>
+          <input type="button" value="0">
+        </div>
+        <div>
+          <input class="equalsTo" type="button" value="=">
+        </div>
+        
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+
+
+
+ 
+</body>
+</html>

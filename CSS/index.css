@@ -1,0 +1,60 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.calculator {
+  background-color: #000;
+  max-width: 280px;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.touchPads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  background-color: gray;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#Input {
+  width: 100%;
+  font-size: 3rem;
+  text-align: end;
+  outline: 0;
+  border: 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+button:hover {
+  background-color: rgba(128, 128, 128, 0.399);
+}
+
+button:active {
+  background-color: pink;
+}
+
+.operatorBtn {
+  background-color: yellow;
+}
+
+.operatorBtn:active {
+  background-color: orangered;
+}

@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anotherExercise</title>
+  <style>
+    *{
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+      padding: 20px;
+    }
+    button{
+      display: block;
+      margin-top: 10px;
+    }
+    .blankArea{
+      padding: 10px 0;
+      width: 100%;
+      background-color: crimson;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 550;
+      margin-top: 10px;
+    }
+    .myCalculator{
+
+      padding: 10px;
+      max-width: 300px;
+      border: 1px solid #fff;
+      box-shadow: -5px -5px 0px gray, 5px 5px 0px gray;
+      height: fit-content;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 10px;
+      #display{
+        width: 100%;
+        text-align: end;
+        font-size: 2rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 10px 0;
+        background-color: rgba(128, 128, 128, 0.605);
+      }
+    }
+    .btnWrapper{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      button{
+        height: 62px;
+        width: 62px;
+        border-radius: 50px;
+        border: none;
+        background-color: gray;
+        color: #fff;
+        font-size: 2.2rem;
+      }
+      button:hover{
+        background-color: rgba(0, 0, 0, 0.688);
+      }
+      button:active{
+        background-color: orangered;
+      }
+    }
+    #operatorBtn{
+      background-color: brown;
+    }
+    #operatorBtn:hover{
+        background-color: green;
+      }
+    #operatorBtn:active{
+        background-color: orangered;
+      }
+  </style>
+</head>
+<body>
+  <button onclick="
+      console.log('Your item has been added to Cart');  
+    ">
+    Add to Cart
+  </button>
+
+  <button onclick="
+    cartQuantity += 1;
+    console.log(`Total Quantity: ${cartQuantity}`);
+  ">
+    +1
+  </button>
+
+  <button onclick="
+    cartQuantity += 2;
+    console.log(`Total Quantity: ${cartQuantity}`);
+  ">
+    +2
+  </button>
+
+  <div class="blankArea">My Calculator</div>
+  <div class="myCalculator">
+    <input id="display" readonly>
+    <div class="btnWrapper">
+      <button onclick="appendTodisplay('7')">7</button>
+      <button onclick="appendTodisplay('8')">8</button>
+      <button onclick="appendTodisplay('9')" >9</button>
+      <button onclick="appendTodisplay('+')" id="operatorBtn">+</button>
+      <button onclick="appendTodisplay('4')">4</button>
+      <button onclick="appendTodisplay('5')">5</button>
+      <button onclick="appendTodisplay('6')">6</button>
+      <button onclick="appendTodisplay('-')" id="operatorBtn">-</button>
+      <button onclick="appendTodisplay('1')">1</button>
+      <button onclick="appendTodisplay('2')">2</button>
+      <button onclick="appendTodisplay('3')">3</button>
+      <button onclick="appendTodisplay('*')" id="operatorBtn">*</button>
+      <button onclick="appendTodisplay('00')">00</button>
+      <button onclick="appendTodisplay('0')">0</button>
+      <button onclick="appendTodisplay('.')">.</button>
+      <button onclick="appendTodisplay('/')" id="operatorBtn">/</button>
+      <button onclick="cleardisplay()">CE</button>
+      <button onclick="deletedisplay()">DE</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="root()">√</button>
+    </div>
+  </div>
+
+  <script>
+    let cartQuantity = 0;
+    console.log(cartQuantity);
+
+    function appendTodisplay(input){
+      display.value += input;
+    }
+    function cleardisplay(input){
+      display.value = '';
+    }
+    function deletedisplay(input){
+      display.value = display.value.toString().slice(0, -1);
+    }
+    function calculate(input){
+      display.value = eval(display.value);
+    }
+    function root(input){
+      display.value = Math.sqrt(display.value);
+    }
+  </script>
+</body>
+</html>
